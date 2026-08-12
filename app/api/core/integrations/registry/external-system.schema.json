@@ -1,0 +1,7 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"ExternalSystem",
+  "type":"object",
+  "required":["system_id","system_name","provider","category","capabilities","authentication_method","status","security_level","allowed_operations","requires_human_approval","rate_limits","webhook_support"],
+  "properties":{"system_id":{"type":"string"},"system_name":{"type":"string"},"provider":{"type":"string"},"category":{"type":"string"},"capabilities":{"type":"array","items":{"type":"string"}},"authentication_method":{"type":"string","enum":["OAUTH","API_KEY","ACCESS_TOKEN","SERVICE_ACCOUNT","WEBHOOK_SECRET","MOCK"]},"status":{"type":"string","enum":["ACTIVE","DEGRADED","UNAVAILABLE","BLOCKED"]},"security_level":{"type":"string"},"allowed_operations":{"type":"array","items":{"type":"string","enum":["READ","WRITE","SEND","PUBLISH","DELETE","ADMIN"]}},"requires_human_approval":{"type":"boolean"},"rate_limits":{"type":"object","additionalProperties":{"type":"integer","minimum":1}},"webhook_support":{"type":"boolean"}}
+}

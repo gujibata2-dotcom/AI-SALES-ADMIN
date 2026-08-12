@@ -1,0 +1,1 @@
+{"provider":"instagram","production_credentials":false,"capabilities":["content_publishing","media","comments","messaging","webhooks"],"adapter_contract":["register","connect","health_check","authorize","execute","get_status","cancel","disconnect"]}

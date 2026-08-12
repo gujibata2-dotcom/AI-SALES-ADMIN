@@ -1,0 +1,5 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"OutboundIntent","type":"object","required":["request_id","action_id","idempotency_key","system_id","operation","content","risk","authorization_status","status"],
+  "properties":{"request_id":{"type":"string"},"action_id":{"type":"string"},"idempotency_key":{"type":"string"},"system_id":{"type":"string"},"operation":{"type":"string","enum":["READ","WRITE","SEND","PUBLISH","DELETE","ADMIN"]},"content":{"type":"object"},"recipient_reference":{"type":"string"},"risk":{"type":"string","enum":["LOW","MEDIUM","HIGH","CRITICAL"]},"authorization_status":{"type":"string"},"status":{"type":"string","enum":["PENDING","AUTHORIZED","QUEUED","PROCESSING","SENT","FAILED","CANCELLED"]}}
+}

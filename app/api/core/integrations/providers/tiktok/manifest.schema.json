@@ -1,0 +1,1 @@
+{"provider":"tiktok","production_credentials":false,"capabilities":["content_publishing","media_workflow","status","webhooks"],"adapter_contract":["register","connect","health_check","authorize","execute","get_status","cancel","disconnect"]}

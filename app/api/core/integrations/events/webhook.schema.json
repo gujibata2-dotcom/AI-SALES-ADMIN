@@ -1,0 +1,5 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"WebhookContract","type":"object","required":["event_id","provider","event_type","timestamp","signature","payload_reference","verification_status"],
+  "properties":{"event_id":{"type":"string"},"provider":{"type":"string"},"event_type":{"type":"string"},"timestamp":{"type":"integer"},"signature":{"type":"string"},"payload_reference":{"type":"string"},"verification_status":{"type":"string","enum":["UNVERIFIED","VERIFIED","REJECTED"]}}
+}

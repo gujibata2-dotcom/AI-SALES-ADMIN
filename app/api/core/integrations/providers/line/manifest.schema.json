@@ -1,0 +1,1 @@
+{"provider":"line","production_credentials":false,"capabilities":["messaging","webhooks","customer_interaction","rich_message"],"adapter_contract":["register","connect","health_check","authorize","execute","get_status","cancel","disconnect"]}

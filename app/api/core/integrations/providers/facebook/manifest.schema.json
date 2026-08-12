@@ -1,0 +1,1 @@
+{"provider":"facebook","production_credentials":false,"capabilities":["page_publishing","messaging","comments","media","webhooks"],"adapter_contract":["register","connect","health_check","authorize","execute","get_status","cancel","disconnect"]}
