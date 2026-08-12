@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","type":"object","required":["goal_id","resources","status"],"properties":{"goal_id":{"type":"string"},"resources":{"type":"object"},"status":{"type":"string"},"impact":{"type":"string"}}}

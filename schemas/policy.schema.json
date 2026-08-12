@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","type":"object","required":["policy_id","scope","rule","authority","version","status"],"properties":{"policy_id":{"type":"string"},"scope":{"type":"string"},"rule":{"type":"string"},"authority":{"type":"string"},"exceptions":{"type":"array"},"version":{"type":"string"},"status":{"type":"string"}}}

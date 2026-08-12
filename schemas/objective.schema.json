@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","type":"object","required":["objective_id","goal_id","name","key_results"],"properties":{"objective_id":{"type":"string"},"goal_id":{"type":"string"},"name":{"type":"string"},"key_results":{"type":"array"}}}

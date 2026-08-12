@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","type":"object","required":["name","assumptions","impact"],"properties":{"name":{"enum":["BASELINE","OPTIMISTIC","PESSIMISTIC","ADVERSE","UNKNOWN"]},"assumptions":{"type":"array"},"probability_if_known":{"type":["number","null"]},"impact":{"type":"string"},"response_plan":{"type":"object"}}}

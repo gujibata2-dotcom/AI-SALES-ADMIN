@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","type":"object","required":["impact","likelihood","detectability","reversibility","status"],"properties":{"impact":{"type":"number"},"likelihood":{"type":"number"},"detectability":{"type":"number"},"reversibility":{"type":"number"},"status":{"type":"string"}}}

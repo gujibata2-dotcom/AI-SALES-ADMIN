@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","type":"object","required":["portfolio_id","projects","strategic_alignment"],"properties":{"portfolio_id":{"type":"string"},"projects":{"type":"array"},"strategic_alignment":{"type":"array"},"resource_allocation":{"type":"object"},"risk":{"type":"object"},"performance":{"type":"object"}}}

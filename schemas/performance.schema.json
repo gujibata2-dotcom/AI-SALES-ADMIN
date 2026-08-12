@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","type":"object","required":["status","components"],"properties":{"status":{"enum":["ON_TRACK","AT_RISK","OFF_TRACK","FAILED","NOT_EVALUATED"]},"components":{"type":"object"},"output":{"type":"object"},"outcome":{"type":"object"}}}

@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","type":"object","required":["incident_id","stage","status"],"properties":{"incident_id":{"type":"string"},"stage":{"enum":["DETECT","CONTAIN","INVESTIGATE","RECOVER","VERIFY","REPORT","LEARN"]},"status":{"type":"string"}}}
