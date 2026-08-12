@@ -1,0 +1,10 @@
+{
+  "task_reference": "task-001",
+  "conversation_reference": "conversation-001",
+  "customer_reference": "customer-reference-001",
+  "approval_reference": "approval-001",
+  "escalation_reference": "escalation-001",
+  "knowledge_reference": "knowledge-001",
+  "action_reference": "action-001",
+  "incident_reference": "incident-001"
+}

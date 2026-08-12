@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ControlCenterResult",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "dashboard": {"type": "object"},
+    "tasks": {"type": "array", "items": {"type": "object"}},
+    "approvals": {"type": "array", "items": {"type": "object"}},
+    "escalations": {"type": "array", "items": {"type": "object"}},
+    "knowledge": {"type": "array", "items": {"type": "object"}},
+    "actions": {"type": "array", "items": {"type": "object"}},
+    "agents": {"type": "array", "items": {"type": "object"}},
+    "alerts": {"type": "array", "items": {"type": "object"}},
+    "metrics": {"type": "object"},
+    "health": {"type": "object"},
+    "audit": {"type": "array", "items": {"type": "object"}},
+    "warnings": {"type": "array", "items": {"type": "string"}}
+  },
+  "required": ["dashboard", "tasks", "approvals", "escalations", "knowledge", "actions", "agents", "alerts", "metrics", "health", "audit", "warnings"]
+}
