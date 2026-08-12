@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "phase19-learning-lifecycle.schema.json",
+  "title": "Phase 19 Learning Lifecycle",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["cycle_id", "state", "source_event_ids", "created_at"],
+  "properties": {
+    "cycle_id": {"type": "string", "minLength": 1},
+    "state": {
+      "type": "string",
+      "enum": [
+        "OBSERVE",
+        "ANALYZE",
+        "GAP_IDENTIFIED",
+        "RECOMMENDED",
+        "EVALUATING",
+        "PENDING_HUMAN_APPROVAL",
+        "REJECTED",
+        "APPROVED",
+        "VERSIONED",
+        "CANARY",
+        "DEPLOYED",
+        "MONITORING",
+        "ROLLBACK"
+      ]
+    },
+    "source_event_ids": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+    "gap_ids": {"type": "array", "items": {"type": "string"}},
+    "recommendation_ids": {"type": "array", "items": {"type": "string"}},
+    "candidate_version": {"type": ["string", "null"]},
+    "active_version": {"type": ["string", "null"]},
+    "approval": {
+      "type": ["object", "null"],
+      "additionalProperties": false,
+      "required": ["status"],
+      "properties": {
+        "status": {"type": "string", "enum": ["pending", "approved", "rejected"]},
+        "actor_id": {"type": ["string", "null"]},
+        "timestamp": {"type": ["string", "null"], "format": "date-time"},
+        "reason": {"type": ["string", "null"]}
+      }
+    },
+    "canary": {
+      "type": ["object", "null"],
+      "additionalProperties": false,
+      "properties": {
+        "traffic_percent": {"type": "number", "minimum": 0, "maximum": 100},
+        "started_at": {"type": ["string", "null"], "format": "date-time"},
+        "completed_at": {"type": ["string", "null"], "format": "date-time"}
+      }
+    },
+    "monitoring": {
+      "type": ["object", "null"],
+      "additionalProperties": false,
+      "properties": {
+        "baseline_score": {"type": ["number", "null"]},
+        "candidate_score": {"type": ["number", "null"]},
+        "regression_detected": {"type": "boolean"},
+        "rollback_required": {"type": "boolean"}
+      }
+    },
+    "created_at": {"type": "string", "format": "date-time"},
+    "updated_at": {"type": ["string", "null"], "format": "date-time"}
+  }
+}
