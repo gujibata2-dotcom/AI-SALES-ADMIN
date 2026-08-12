@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","type":"object","additionalProperties":false,"required":["employee_id","domains","generated_at"],"properties":{"employee_id":{"type":"string"},"domains":{"type":"object","additionalProperties":{"type":"object"}},"generated_at":{"type":"string"}}}
