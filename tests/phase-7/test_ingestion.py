@@ -19,7 +19,7 @@ def test_normalize_rejects_empty_text():
 
 def test_chunk_preserves_provenance_and_order():
     doc = normalize(KnowledgeDocument("src-9", "FAQ", "first paragraph\n\nsecond paragraph", "en"))
-    chunks = chunk(doc, max_chars=50)
+    chunks = chunk(doc, max_chars=20)
     assert [c.chunk_id for c in chunks] == ["src-9:1", "src-9:2"]
     assert all(c.source_id == "src-9" for c in chunks)
 
