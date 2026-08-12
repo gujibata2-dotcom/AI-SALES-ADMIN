@@ -1,0 +1,12 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"Autonomous Execution",
+  "type":"object",
+  "required":["execution_id","decision_id","task_id","plan_id","employee_id","team_id","actions","authorization","risk","status","started_at","completed_at","result","verification","rollback","incident_reference"],
+  "properties":{
+    "execution_id":{"type":"string"},"decision_id":{"type":"string"},"task_id":{"type":"string"},"plan_id":{"type":"string"},"employee_id":{"type":"string"},"team_id":{"type":"string"},
+    "actions":{"type":"array","items":{"type":"object"}},"authorization":{"type":"object"},"risk":{"type":"string","enum":["READ_ONLY","LOW_RISK","MEDIUM_RISK","HIGH_RISK","CRITICAL"]},
+    "status":{"type":"string","enum":["PLANNED","AUTHORIZED","PREPARING","RUNNING","VERIFYING","COMPLETED","FAILED","PAUSED","ESCALATED","ROLLED_BACK","CANCELLED"]},
+    "started_at":{"type":["string","null"]},"completed_at":{"type":["string","null"]},"result":{},"verification":{"type":"object"},"rollback":{"type":["object","null"]},"incident_reference":{"type":["string","null"]}
+  },"additionalProperties":false
+}

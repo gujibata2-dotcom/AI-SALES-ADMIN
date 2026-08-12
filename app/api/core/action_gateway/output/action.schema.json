@@ -1,0 +1,10 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"Action Gateway Request",
+  "type":"object",
+  "required":["action_id","action_type","target","parameters","requested_by","authorized_by","risk_level","permission","policy","status","result","verification","timestamp"],
+  "properties":{
+    "action_id":{"type":"string"},"action_type":{"type":"string"},"target":{"type":"string"},"parameters":{"type":"object"},"requested_by":{"type":"string"},"authorized_by":{"type":"string"},
+    "risk_level":{"type":"string","enum":["READ_ONLY","LOW_RISK","MEDIUM_RISK","HIGH_RISK","CRITICAL"]},"permission":{"type":"string"},"policy":{"type":"string"},"status":{"type":"string"},"result":{},"verification":{},"timestamp":{"type":"string"}
+  },"additionalProperties":false
+}
