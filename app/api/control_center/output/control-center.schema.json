@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ControlCenterResult",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "dashboard": {"type": "object"},
+    "status": {"type": "string"},
+    "approvals": {"type": "array", "items": {"type": "object"}},
+    "tasks": {"type": "array", "items": {"type": "object"}},
+    "actions": {"type": "array", "items": {"type": "object"}},
+    "alerts": {"type": "array", "items": {"type": "object"}},
+    "metrics": {"type": "object"},
+    "audit": {"type": "array", "items": {"type": "object"}},
+    "health": {"type": "object"}
+  },
+  "required": ["dashboard", "status", "approvals", "tasks", "actions", "alerts", "metrics", "audit", "health"]
+}
