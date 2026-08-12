@@ -1,0 +1,11 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"Reliability Health Report","type":"object",
+  "required":["health_id","component_id","component_type","status","health_score","checks","warnings","incidents","last_checked","next_check"],
+  "properties":{
+    "health_id":{"type":"string"},"component_id":{"type":"string"},
+    "component_type":{"type":"string","enum":["AI_EMPLOYEE","AI_TEAM","WORKFLOW","KNOWLEDGE_ENGINE","DECISION_ENGINE","ACTION_GATEWAY","INTEGRATION","QUEUE","SCHEDULER","DATABASE","MODEL","CONTENT_PIPELINE","SOCIAL_CHANNEL","SUPPORT_CHANNEL"]},
+    "status":{"type":"string","enum":["HEALTHY","DEGRADED","UNHEALTHY","UNKNOWN","OFFLINE"]},
+    "health_score":{"type":["number","null"],"minimum":0,"maximum":1},"checks":{"type":"array"},"warnings":{"type":"array"},"incidents":{"type":"array"},"last_checked":{"type":"string"},"next_check":{"type":"string"}
+  },"additionalProperties":false
+}

@@ -1,0 +1,7 @@
+{
+ "$schema":"https://json-schema.org/draft/2020-12/schema","title":"Incident","type":"object",
+ "required":["incident_id","severity","source","affected_components","description","detected_at","status","root_cause","impact","recovery_plan","resolution","owner","timeline"],
+ "properties":{
+  "incident_id":{"type":"string"},"severity":{"type":"string","enum":["INFO","WARNING","HIGH","CRITICAL"]},"source":{"type":"string"},"affected_components":{"type":"array","items":{"type":"string"}},"description":{"type":"string"},"detected_at":{"type":"string"},"status":{"type":"string","enum":["OPEN","INVESTIGATING","MITIGATING","RECOVERED","RESOLVED","CLOSED"]},"root_cause":{"type":["string","null"]},"impact":{"type":"object"},"recovery_plan":{"type":["string","null"]},"resolution":{"type":["string","null"]},"owner":{"type":["string","null"]},"timeline":{"type":"array","items":{"type":"string"}}
+ },"additionalProperties":false
+}
