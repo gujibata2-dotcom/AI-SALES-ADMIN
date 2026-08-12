@@ -1,0 +1,17 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"AI Employee Collaboration Message",
+  "type":"object",
+  "additionalProperties":false,
+  "required":["message_id","sender_employee_id","receiver_employee_id","task_id","message_type","payload","timestamp","correlation_id"],
+  "properties":{
+    "message_id":{"type":"string","minLength":1},
+    "sender_employee_id":{"type":"string","minLength":1},
+    "receiver_employee_id":{"type":"string","minLength":1},
+    "task_id":{"type":"string","minLength":1},
+    "message_type":{"type":"string","enum":["TASK_REQUEST","TASK_RESPONSE","QUESTION","ANSWER","ESCALATION","HANDOFF","APPROVAL_REQUEST","STATUS_UPDATE","ERROR","COMPLETION"]},
+    "payload":{"type":"object"},
+    "timestamp":{"type":"string","format":"date-time"},
+    "correlation_id":{"type":"string","minLength":1}
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"AI Employee Registry Entry",
+  "type":"object",
+  "additionalProperties":false,
+  "required":["employee_id","name","type","role","department","skills","permissions","manager","status","version","created_at"],
+  "properties":{
+    "employee_id":{"type":"string","minLength":1},"name":{"type":"string","minLength":1},
+    "type":{"type":"string","enum":["AI_EMPLOYEE","AI_SPECIALIST","HUMAN_EMPLOYEE"]},
+    "role":{"type":"string","minLength":1},"department":{"type":"string","minLength":1},
+    "skills":{"type":"array","items":{"type":"string"}},"permissions":{"type":"array","items":{"type":"string"}},
+    "manager":{"type":"string","minLength":1},
+    "status":{"type":"string","enum":["ONBOARDING","ACTIVE","BUSY","WAITING","ESCALATED","SUSPENDED","DISABLED","RETIRED"]},
+    "version":{"type":"string","minLength":1},"created_at":{"type":"string","format":"date-time"}
+  }
+}

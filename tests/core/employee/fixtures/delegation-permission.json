@@ -1,0 +1,1 @@
+{"case":"delegation-permission","sender_permission":"READ","receiver_permission":"SEND","requested_action":"SEND","expected_permission_source":"executor","propagate_sender_permission":false}

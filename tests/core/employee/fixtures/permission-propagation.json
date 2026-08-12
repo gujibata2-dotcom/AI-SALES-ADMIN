@@ -1,0 +1,1 @@
+{"case":"permission-propagation","sender_permission":"LOW","receiver_permission":"READ_ONLY","requested_action":"WRITE","expected":"BLOCK","reason":"sender authority does not propagate and receiver lacks WRITE"}

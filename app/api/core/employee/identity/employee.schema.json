@@ -1,0 +1,20 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"AI Employee Identity",
+  "type":"object",
+  "additionalProperties":false,
+  "required":["employee_id","employee_type","display_name","role","department","status","manager_reference","created_at","version","capabilities","permission_profile"],
+  "properties":{
+    "employee_id":{"type":"string","minLength":1},
+    "employee_type":{"type":"string","enum":["AI_EMPLOYEE","AI_SPECIALIST","HUMAN_EMPLOYEE"]},
+    "display_name":{"type":"string","minLength":1},
+    "role":{"type":"string","minLength":1},
+    "department":{"type":"string","minLength":1},
+    "status":{"type":"string","enum":["ONBOARDING","ACTIVE","BUSY","WAITING","ESCALATED","SUSPENDED","DISABLED","RETIRED"]},
+    "manager_reference":{"type":"string","minLength":1},
+    "created_at":{"type":"string","format":"date-time"},
+    "version":{"type":"string","minLength":1},
+    "capabilities":{"type":"array","items":{"type":"string"}},
+    "permission_profile":{"type":"string","minLength":1}
+  }
+}
