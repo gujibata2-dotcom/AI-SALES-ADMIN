@@ -1,0 +1,40 @@
+{
+  "documents": [
+    {
+      "source_id": "fixture-product-001",
+      "title": "Synthetic Product A",
+      "source_type": "product",
+      "content": "Synthetic Product A is available in standard configuration.",
+      "version": "1.0",
+      "status": "verified",
+      "verified_at": "2026-08-12T00:00:00Z",
+      "verified_by": "fixture-verifier",
+      "effective_from": "2026-08-12T00:00:00Z",
+      "effective_until": null,
+      "chunks": [
+        {
+          "chunk_id": "fixture-product-001-c001",
+          "content": "Synthetic Product A is available in standard configuration."
+        }
+      ]
+    },
+    {
+      "source_id": "fixture-expired-promo-001",
+      "title": "Synthetic Expired Promotion",
+      "source_type": "promotion",
+      "content": "Synthetic promotion that is intentionally expired for retrieval tests.",
+      "version": "1.0",
+      "status": "expired",
+      "verified_at": "2026-07-01T00:00:00Z",
+      "verified_by": "fixture-verifier",
+      "effective_from": "2026-07-01T00:00:00Z",
+      "effective_until": "2026-07-31T23:59:59Z",
+      "chunks": [
+        {
+          "chunk_id": "fixture-expired-promo-001-c001",
+          "content": "Synthetic promotion that is intentionally expired for retrieval tests."
+        }
+      ]
+    }
+  ]
+}
