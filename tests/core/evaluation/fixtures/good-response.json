@@ -1,0 +1,1 @@
+{"case":"good-response","input":"Is this product available?","expected_behavior":"Answer only from an authoritative source and disclose uncertainty when stock is not verified.","expected":"PASS"}

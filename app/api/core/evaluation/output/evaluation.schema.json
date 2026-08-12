@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AI Employee Evaluation Result",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["evaluation_id","candidate_id","version","evaluation_type","dataset_reference","criteria","scores","failures","warnings","risk_level","recommendation","review_required","created_at"],
+  "properties": {
+    "evaluation_id": {"type":"string","minLength":1},
+    "candidate_id": {"type":"string","minLength":1},
+    "version": {"type":"string","minLength":1},
+    "evaluation_type": {"type":"string","enum":["RESPONSE_QUALITY","KNOWLEDGE_ACCURACY","SAFETY","ETHICS","SALES_QUALITY","CUSTOMER_EXPERIENCE","MULTILINGUAL","CONTENT_QUALITY","WORKFLOW","POLICY_COMPLIANCE","REGRESSION","SECURITY","PRIVACY"]},
+    "dataset_reference": {"type":"string","minLength":1},
+    "criteria": {"type":"array","items":{"type":"string"}},
+    "scores": {"type":"object","additionalProperties":{"type":"number","minimum":0,"maximum":100}},
+    "failures": {"type":"array","items":{"type":"string"}},
+    "warnings": {"type":"array","items":{"type":"string"}},
+    "risk_level": {"type":"string","enum":["LOW","MEDIUM","HIGH","CRITICAL"]},
+    "recommendation": {"type":"string","enum":["PASS","FAIL","REVIEW","BLOCK_RELEASE"]},
+    "review_required": {"type":"boolean"},
+    "created_at": {"type":"string","format":"date-time"}
+  }
+}
