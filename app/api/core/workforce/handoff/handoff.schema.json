@@ -1,0 +1,7 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"Workforce Handoff",
+  "type":"object","additionalProperties":false,
+  "required":["handoff_id","from_employee","to_employee","task_id","context","completed_work","pending_work","known_facts","unknowns","risks","sources","recommendation","timestamp"],
+  "properties":{"handoff_id":{"type":"string"},"from_employee":{"type":"string"},"to_employee":{"type":"string"},"task_id":{"type":"string"},"context":{"type":"object"},"completed_work":{"type":"array"},"pending_work":{"type":"array"},"known_facts":{"type":"array"},"unknowns":{"type":"array"},"risks":{"type":"array"},"sources":{"type":"array"},"recommendation":{"type":"string"},"timestamp":{"type":"string","format":"date-time"}}
+}

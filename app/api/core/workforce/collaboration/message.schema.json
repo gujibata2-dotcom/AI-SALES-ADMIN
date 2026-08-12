@@ -1,0 +1,7 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"Workforce Collaboration Message",
+  "type":"object","additionalProperties":false,
+  "required":["message_id","sender_employee_id","receiver_employee_id","task_id","message_type","payload","timestamp","correlation_id"],
+  "properties":{"message_id":{"type":"string"},"sender_employee_id":{"type":"string"},"receiver_employee_id":{"type":"string"},"task_id":{"type":"string"},"message_type":{"type":"string","enum":["TASK_REQUEST","TASK_ACCEPTED","TASK_REJECTED","QUESTION","ANSWER","HANDOFF","RESULT","WARNING","ESCALATION","APPROVAL_REQUEST","COMPLETION","FAILURE"]},"payload":{"type":"object"},"timestamp":{"type":"string","format":"date-time"},"correlation_id":{"type":"string"}}
+}

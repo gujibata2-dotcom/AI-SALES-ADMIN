@@ -1,0 +1,9 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"Workforce",
+  "type":"object","additionalProperties":false,
+  "required":["workforce_id","organization_reference","employees","teams","departments","policies","status","version","created_at"],
+  "properties":{
+    "workforce_id":{"type":"string"},"organization_reference":{"type":"string"},"employees":{"type":"array","items":{"type":"string"}},"teams":{"type":"array","items":{"type":"string"}},"departments":{"type":"array","items":{"type":"string"}},"policies":{"type":"array","items":{"type":"string"}},"status":{"type":"string"},"version":{"type":"string"},"created_at":{"type":"string","format":"date-time"}
+  }
+}
