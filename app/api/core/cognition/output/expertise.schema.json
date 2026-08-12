@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","title":"Expertise","type":"object","required":["domain","level","evidence","limitations"],"properties":{"domain":{"type":"string"},"level":{"type":"string"},"evidence":{"type":"array"},"limitations":{"type":"array"},"sample_size":{"type":"integer"}}}
