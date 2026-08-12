@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ActionResult",
+  "type": "object",
+  "required": ["action_id", "task_id", "action_type", "authorization", "risk_level", "execution_status", "verification_status", "adapter", "result_reference", "warnings", "requires_human_review", "timestamp"],
+  "properties": {
+    "action_id": {"type":"string"},
+    "task_id": {"type":"string"},
+    "action_type": {"type":"string"},
+    "authorization": {"enum":["AUTHORIZED","REQUIRES_APPROVAL","BLOCKED","EXPIRED","INVALID"]},
+    "risk_level": {"enum":["LOW","MEDIUM","HIGH","CRITICAL"]},
+    "execution_status": {"enum":["ACTION_ACCEPTED","ACTION_EXECUTED","ACTION_FAILED","ACTION_PARTIALLY_COMPLETED","ACTION_RESULT_UNKNOWN"]},
+    "verification_status": {"type":"string"},
+    "adapter": {"type":"string"},
+    "result_reference": {"type":"string"},
+    "warnings": {"type":"array","items":{"type":"string"}},
+    "requires_human_review": {"type":"boolean"},
+    "timestamp": {"type":"string","format":"date-time"}
+  },
+  "additionalProperties": false
+}
