@@ -1,0 +1,21 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"orchestration-result.schema.json",
+  "title":"AI Employee Orchestration Result",
+  "type":"object",
+  "additionalProperties":false,
+  "required":["orchestration_id","workflow","current_state","steps","completed_steps","pending_steps","failed_steps","next_step","dependencies","verification","warnings"],
+  "properties":{
+    "orchestration_id":{"type":"string","minLength":1},
+    "workflow":{"type":"string","minLength":1},
+    "current_state":{"type":"string","enum":["CREATED","PLANNING","WAITING_KNOWLEDGE","WAITING_CUSTOMER","WAITING_APPROVAL","READY","EXECUTING","VERIFYING","COMPLETED","FAILED","ESCALATED","CANCELLED"]},
+    "steps":{"type":"array","items":{"type":"object","additionalProperties":true}},
+    "completed_steps":{"type":"array","items":{"type":"string"}},
+    "pending_steps":{"type":"array","items":{"type":"string"}},
+    "failed_steps":{"type":"array","items":{"type":"string"}},
+    "next_step":{"type":"string"},
+    "dependencies":{"type":"array","items":{"type":"string"}},
+    "verification":{"type":"object","additionalProperties":true},
+    "warnings":{"type":"array","items":{"type":"string"}}
+  }
+}

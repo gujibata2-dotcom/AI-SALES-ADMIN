@@ -1,0 +1,25 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"decision-result.schema.json",
+  "title":"AI Employee Decision Result",
+  "type":"object",
+  "additionalProperties":false,
+  "required":["decision_id","task_reference","context","confidence","risk","selected_action","selected_agent","workflow","plan","authorization","policy_checks","verification_requirements","warnings","requires_human_review"],
+  "properties":{
+    "decision_id":{"type":"string","minLength":1},
+    "task_reference":{"type":"string","minLength":1},
+    "conversation_reference":{"type":"string"},
+    "context":{"type":"object","additionalProperties":true},
+    "confidence":{"type":"string","enum":["HIGH","MEDIUM","LOW","UNKNOWN"]},
+    "risk":{"type":"string","enum":["LOW","MEDIUM","HIGH","CRITICAL"]},
+    "selected_action":{"type":"string","enum":["ANSWER","ASK_CLARIFICATION","RETRIEVE_KNOWLEDGE","COMPARE_PRODUCTS","RECOMMEND_PRODUCT","CREATE_TASK","UPDATE_TASK","FOLLOW_UP","ESCALATE_HUMAN","REQUEST_APPROVAL","WAIT","CLOSE"]},
+    "selected_agent":{"type":"string","enum":["AI_ADMIN","AI_SALES","AI_SUPPORT","HUMAN"]},
+    "workflow":{"type":"string","minLength":1},
+    "plan":{"type":"object","additionalProperties":true},
+    "authorization":{"type":"object","additionalProperties":true},
+    "policy_checks":{"type":"object","additionalProperties":true},
+    "verification_requirements":{"type":"array","items":{"type":"string"}},
+    "warnings":{"type":"array","items":{"type":"string"}},
+    "requires_human_review":{"type":"boolean"}
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "fixture_id":"decision-001",
+  "intent":"product_recommendation",
+  "customer_needs":{"use_case":"unknown"},
+  "knowledge":{"verified":true,"price":"REFERENCE_ONLY"},
+  "confidence":"LOW",
+  "risk":"LOW",
+  "expected_action":"ASK_CLARIFICATION"
+}

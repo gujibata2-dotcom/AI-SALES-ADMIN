@@ -1,0 +1,9 @@
+{
+  "fixture_id":"decision-002",
+  "intent":"refund_request",
+  "knowledge":{"policy_verified":true},
+  "confidence":"HIGH",
+  "risk":"HIGH",
+  "authorization":{"present":false},
+  "expected_action":"REQUEST_APPROVAL"
+}
