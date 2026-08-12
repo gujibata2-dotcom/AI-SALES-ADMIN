@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "EmployeeWorkflowResult",
+  "type": "object",
+  "required": ["request_id", "conversation_id", "task_id", "role", "task_type", "workflow", "status", "decision", "actions", "knowledge_sources", "response_reference", "human_escalation", "audit_reference", "warnings", "confidence"],
+  "properties": {
+    "request_id": {"type": "string"},
+    "conversation_id": {"type": "string"},
+    "task_id": {"type": "string"},
+    "role": {"type": "array", "items": {"type": "string", "enum": ["ADMIN", "SALES", "SUPPORT", "ESCALATION_COORDINATOR"]}},
+    "task_type": {"type": "string"},
+    "workflow": {"type": "string"},
+    "status": {"type": "string", "enum": ["NEW", "CLASSIFIED", "IN_PROGRESS", "WAITING_FOR_CUSTOMER", "WAITING_FOR_BUSINESS", "WAITING_FOR_HUMAN", "COMPLETED", "CANCELLED", "FAILED"]},
+    "decision": {"type": "string"},
+    "actions": {"type": "array", "items": {"type": "string"}},
+    "knowledge_sources": {"type": "array", "items": {"type": "string"}},
+    "response_reference": {"type": ["string", "null"]},
+    "human_escalation": {"type": "boolean"},
+    "audit_reference": {"type": "string"},
+    "warnings": {"type": "array", "items": {"type": "string"}},
+    "confidence": {"type": "number", "minimum": 0, "maximum": 1}
+  },
+  "additionalProperties": false
+}
