@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Decision",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["decision_id","business_reference","decision_type","objective","context","facts","unknowns","assumptions","options","risks","opportunities","recommendation","confidence","approval_required","decision_owner","status","created_at","updated_at"],
+  "properties": {
+    "decision_id":{"type":"string","minLength":1},
+    "business_reference":{"type":"string","minLength":1},
+    "decision_type":{"type":"string","minLength":1},
+    "objective":{"type":"string"},
+    "context":{"type":"string"},
+    "facts":{"type":"array","items":{"type":"object","required":["statement","source"],"properties":{"statement":{"type":"string"},"source":{"type":"string","enum":["BUSINESS_DATA","VERIFIED_KNOWLEDGE","SYSTEM_EVENT","EXTERNAL_SOURCE","HUMAN_INPUT","NOT_PROVIDED"]}},"additionalProperties":false}},
+    "unknowns":{"type":"array","items":{"type":"string"}},
+    "assumptions":{"type":"array","items":{"type":"string"}},
+    "options":{"type":"array","items":{"type":"object","required":["name","benefits","cost","risk","dependencies","expected_outcome","uncertainty"],"properties":{"name":{"type":"string"},"benefits":{"type":"array","items":{"type":"string"}},"cost":{"type":"string"},"risk":{"type":"string"},"dependencies":{"type":"array","items":{"type":"string"}},"expected_outcome":{"type":"string"},"uncertainty":{"type":"string"}},"additionalProperties":false}},
+    "risks":{"type":"array","items":{"type":"string"}},
+    "opportunities":{"type":"array","items":{"type":"string"}},
+    "recommendation":{"type":"object","required":["reasoning_summary","evidence","assumptions","risks","expected_outcome","confidence","alternatives"],"properties":{"reasoning_summary":{"type":"string"},"evidence":{"type":"array","items":{"type":"string"}},"assumptions":{"type":"array","items":{"type":"string"}},"risks":{"type":"array","items":{"type":"string"}},"expected_outcome":{"type":"string"},"confidence":{"type":"string","enum":["HIGH","MEDIUM","LOW"]},"alternatives":{"type":"array","items":{"type":"string"}}},"additionalProperties":false},
+    "confidence":{"type":"string","enum":["HIGH","MEDIUM","LOW"]},
+    "approval_required":{"type":"boolean"},
+    "decision_owner":{"type":"string"},
+    "status":{"type":"string","enum":["DRAFT","ANALYZING","REVIEW_REQUIRED","PENDING_APPROVAL","APPROVED","REJECTED","EXECUTING","COMPLETED","FAILED","ROLLED_BACK"]},
+    "created_at":{"type":"string","format":"date-time"},
+    "updated_at":{"type":"string","format":"date-time"},
+    "outcome_reference":{"type":"string"}
+  }
+}
