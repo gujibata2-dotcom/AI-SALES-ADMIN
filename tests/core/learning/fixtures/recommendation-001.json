@@ -1,0 +1,11 @@
+{
+  "recommendation_id": "recommendation-001",
+  "type": "KNOWLEDGE_UPDATE",
+  "problem": "Repeated product attribute question lacks authoritative information in the current retrieval path.",
+  "evidence": ["learning-event-001", "knowledge-gap-001"],
+  "proposed_change": "Request verification of the authoritative product source and add a reviewed FAQ entry if verified.",
+  "expected_benefit": "Reduce repeated clarification and unsupported responses.",
+  "risk": "Publishing an unverified attribute would create a false fact.",
+  "affected_components": ["knowledge", "retrieval", "response"],
+  "requires_human_approval": true
+}

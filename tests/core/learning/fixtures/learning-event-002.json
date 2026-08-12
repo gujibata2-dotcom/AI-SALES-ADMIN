@@ -1,0 +1,10 @@
+{
+  "event_id": "learning-event-002",
+  "event_type": "HUMAN_CORRECTION",
+  "conversation_reference": "conversation-ref-002",
+  "outcome": "Human reviewer corrected an unsupported product claim.",
+  "correction_reference": "correction-ref-001",
+  "timestamp": "2026-08-12T12:05:00Z",
+  "source": "synthetic-fixture",
+  "privacy_classification": "INTERNAL"
+}

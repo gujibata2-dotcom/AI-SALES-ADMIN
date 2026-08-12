@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "learning-event.schema.json",
+  "title": "AI Employee Learning Event",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["event_id", "event_type", "outcome", "timestamp", "source", "privacy_classification"],
+  "properties": {
+    "event_id": {"type": "string", "minLength": 1},
+    "event_type": {"type": "string", "enum": ["RESPONSE_SUCCESS", "RESPONSE_FAILURE", "CUSTOMER_CLARIFICATION", "CUSTOMER_CORRECTION", "HUMAN_CORRECTION", "KNOWLEDGE_MISS", "KNOWLEDGE_CONFLICT", "RETRIEVAL_FAILURE", "LOW_CONFIDENCE", "WORKFLOW_FAILURE", "ACTION_FAILURE", "ESCALATION", "CUSTOMER_REJECTION", "CUSTOMER_ACCEPTANCE", "CUSTOMER_FEEDBACK"]},
+    "task_reference": {"type": "string"},
+    "conversation_reference": {"type": "string"},
+    "knowledge_reference": {"type": "string"},
+    "workflow_reference": {"type": "string"},
+    "action_reference": {"type": "string"},
+    "outcome": {"type": "string", "minLength": 1},
+    "feedback": {"type": "string"},
+    "correction_reference": {"type": "string"},
+    "timestamp": {"type": "string", "format": "date-time"},
+    "source": {"type": "string", "minLength": 1},
+    "privacy_classification": {"type": "string", "enum": ["PUBLIC", "INTERNAL", "CONFIDENTIAL", "RESTRICTED"]}
+  }
+}

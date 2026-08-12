@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "learning-result.schema.json",
+  "title": "AI Employee Learning Result",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["analysis_id", "events_analyzed", "patterns", "knowledge_gaps", "recommendations", "evaluation", "approval", "warnings", "requires_human_review"],
+  "properties": {
+    "analysis_id": {"type": "string"},
+    "events_analyzed": {"type": "integer", "minimum": 0},
+    "patterns": {"type": "array", "items": {"type": "object", "required": ["pattern_id", "description", "evidence_count", "confidence", "limitations"], "properties": {"pattern_id": {"type": "string"}, "description": {"type": "string"}, "evidence_count": {"type": "integer", "minimum": 0}, "source_events": {"type": "array", "items": {"type": "string"}}, "confidence": {"type": "number", "minimum": 0, "maximum": 1}, "time_range": {"type": "string"}, "limitations": {"type": "string"}}, "additionalProperties": false}},
+    "knowledge_gaps": {"type": "array", "items": {"type": "object", "required": ["gap_id", "question_pattern", "missing_information", "frequency", "confidence", "requires_human_review"], "properties": {"gap_id": {"type": "string"}, "question_pattern": {"type": "string"}, "missing_information": {"type": "string"}, "frequency": {"type": "integer", "minimum": 1}, "confidence": {"type": "number", "minimum": 0, "maximum": 1}, "recommended_source": {"type": "string"}, "requires_human_review": {"const": true}}, "additionalProperties": false}},
+    "recommendations": {"type": "array", "items": {"type": "object", "required": ["recommendation_id", "type", "problem", "evidence", "proposed_change", "expected_benefit", "risk", "affected_components", "requires_human_approval"], "properties": {"recommendation_id": {"type": "string"}, "type": {"type": "string"}, "problem": {"type": "string"}, "evidence": {"type": "array", "items": {"type": "string"}}, "proposed_change": {"type": "string"}, "expected_benefit": {"type": "string"}, "risk": {"type": "string"}, "affected_components": {"type": "array", "items": {"type": "string"}}, "requires_human_approval": {"type": "boolean"}}, "additionalProperties": false}},
+    "evaluation": {"type": "object", "additionalProperties": {"type": "number", "minimum": 0, "maximum": 1}},
+    "approval": {"type": "string", "enum": ["PENDING", "APPROVED", "REJECTED", "EXPIRED", "ROLLED_BACK"]},
+    "version": {"type": "string"},
+    "warnings": {"type": "array", "items": {"type": "string"}},
+    "requires_human_review": {"type": "boolean"}
+  }
+}

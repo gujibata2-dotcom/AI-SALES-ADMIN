@@ -1,0 +1,8 @@
+{
+  "feedback_id": "feedback-001",
+  "label": "UNSUPPORTED_CLAIM",
+  "source_reference": "conversation-ref-002",
+  "review_reference": "human-review-ref-001",
+  "verified": false,
+  "source": "synthetic-fixture"
+}

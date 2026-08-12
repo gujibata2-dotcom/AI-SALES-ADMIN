@@ -1,0 +1,11 @@
+{
+  "event_id": "learning-event-001",
+  "event_type": "KNOWLEDGE_MISS",
+  "conversation_reference": "conversation-ref-001",
+  "task_reference": "task-ref-001",
+  "outcome": "Customer asked for a product attribute not present in the available knowledge source.",
+  "feedback": "Need authoritative specification.",
+  "timestamp": "2026-08-12T12:00:00Z",
+  "source": "synthetic-fixture",
+  "privacy_classification": "INTERNAL"
+}

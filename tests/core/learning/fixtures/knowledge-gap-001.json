@@ -1,0 +1,9 @@
+{
+  "gap_id": "knowledge-gap-001",
+  "question_pattern": "product-weather-resistance-specification",
+  "missing_information": "authoritative resistance specification",
+  "frequency": 3,
+  "confidence": 0.82,
+  "recommended_source": "product-source-ref-001",
+  "requires_human_review": true
+}

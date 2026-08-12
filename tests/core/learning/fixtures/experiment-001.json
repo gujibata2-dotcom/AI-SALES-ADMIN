@@ -1,0 +1,11 @@
+{
+  "experiment_id": "experiment-001",
+  "control": "existing-response-style",
+  "variant": "shorter-response-style",
+  "hypothesis": "A shorter response may reduce unnecessary verbosity without reducing accuracy or clarity.",
+  "metric": "accuracy, grounding, clarity, customer_autonomy",
+  "time_range": "synthetic",
+  "sample_size": 10,
+  "result": "not-run",
+  "limitations": "Synthetic fixture only; no production side effect."
+}
