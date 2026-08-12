@@ -1,0 +1,2 @@
+def build_report(question_id, scope, method, sources, evidence, findings, conflicts, uncertainties, conclusion, recommendations, open_questions):
+    return {"research_question_id": question_id, "executive_summary": conclusion, "scope": scope, "method": method, "sources": sources, "evidence": evidence, "findings": findings, "conflicts": conflicts, "uncertainties": uncertainties, "conclusion": conclusion, "recommendations": recommendations, "open_questions": open_questions}
