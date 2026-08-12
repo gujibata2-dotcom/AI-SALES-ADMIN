@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","title":"InnovationEvent","type":"object","required":["innovation_id","event_type","timestamp"],"properties":{"innovation_id":{"type":"string"},"event_type":{"type":"string"},"timestamp":{"type":"string"},"actor":{"type":"string"},"version":{"type":"string"},"metadata":{"type":"object"}}}

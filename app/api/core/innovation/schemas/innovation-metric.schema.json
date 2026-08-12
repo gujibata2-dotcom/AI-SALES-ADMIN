@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","title":"InnovationMetric","type":"object","required":["metric_id","name"],"properties":{"metric_id":{"type":"string"},"name":{"type":"string"},"baseline":{"type":["number","null"]},"candidate":{"type":["number","null"]},"unit":{"type":"string"},"direction":{"type":"string"},"context":{"type":"string"}}}
