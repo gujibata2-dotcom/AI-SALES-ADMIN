@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","title":"ToolEconomics","type":"object","required":["tool_id"],"properties":{"tool_id":{"type":"string"},"capability_evidence":{"type":"object"},"cost":{"type":["number","null"]},"success_rate":{"type":["number","null"]},"failure_rate":{"type":["number","null"]},"security_status":{"type":"string"}}}

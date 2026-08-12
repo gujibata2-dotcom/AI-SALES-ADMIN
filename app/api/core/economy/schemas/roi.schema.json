@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","title":"ROI","type":"object","required":["roi_id","status"],"properties":{"roi_id":{"type":"string"},"investment_cost":{"type":["number","null"]},"verified_benefit":{"type":["number","null"]},"roi":{"type":["number","null"]},"status":{"enum":["DETERMINED","ROI_UNDETERMINED"]}}}

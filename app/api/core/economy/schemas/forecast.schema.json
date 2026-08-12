@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","title":"Forecast","type":"object","properties":{"expected_cost":{"type":["number","null"]},"best_case":{"type":["number","null"]},"worst_case":{"type":["number","null"]},"uncertainty":{"type":["number","null"]},"confidence":{"type":["number","null"]},"status":{"type":"string"}}}

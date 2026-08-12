@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","title":"Scenario","type":"object","required":["scenario","assumptions"],"properties":{"scenario":{"type":"string"},"assumptions":{"type":"array","items":{"type":"string"}},"impact":{},"probability_if_known":{},"response_plan":{"type":["string","null"]}}}
