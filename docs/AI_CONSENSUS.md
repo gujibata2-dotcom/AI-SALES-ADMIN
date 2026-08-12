@@ -1,3 +1,2 @@
-# Consensus
-
-Consensus is evidence-weighted, not vote-counted. Compare source quality, confidence, specialization and track record. Record dissent. If evidence cannot resolve a conflict, escalate rather than selecting randomly.
+# AI Consensus
+Consensus is an evidence-weighted recommendation, not a vote. Evidence quality, specialization, confidence and risk are considered. Equal or insufficient evidence produces ESCALATED/HUMAN_REVIEW rather than an arbitrary winner.

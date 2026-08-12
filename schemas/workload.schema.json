@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","title":"Workload","type":"object","required":["employee_id","capacity","active_tasks","utilization"],"properties":{"employee_id":{"type":"string"},"capacity":{"type":"number","minimum":0},"active_tasks":{"type":"array"},"utilization":{"type":"number","minimum":0},"queued_tasks":{"type":"array"}}}

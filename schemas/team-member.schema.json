@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","title":"TeamMember","type":"object","required":["employee_id","role","permissions"],"properties":{"employee_id":{"type":"string"},"role":{"type":"string"},"capabilities":{"type":"array"},"permissions":{"type":"array"},"status":{"type":"string"}}}

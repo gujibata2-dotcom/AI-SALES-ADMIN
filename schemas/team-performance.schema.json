@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","title":"TeamPerformance","type":"object","required":["team_id","status","metrics"],"properties":{"team_id":{"type":"string"},"status":{"enum":["NOT_EVALUATED","EVALUATED"]},"metrics":{"type":"object"},"evidence":{"type":"array"}}}

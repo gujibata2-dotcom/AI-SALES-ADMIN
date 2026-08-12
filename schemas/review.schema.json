@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","title":"Review","type":"object","required":["review_id","task_id","reviewer","independent","decision"],"properties":{"review_id":{"type":"string"},"task_id":{"type":"string"},"reviewer":{"type":"string"},"independent":{"type":"boolean"},"decision":{"enum":["PASS","FAIL","ESCALATE"]},"evidence":{"type":"array"}}}
