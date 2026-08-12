@@ -1,0 +1,3 @@
+# Capabilities
+
+MESSAGING, EMAIL, SOCIAL, CRM, TICKETING, COMMERCE, PAYMENT, DOCUMENT, ANALYTICS, STORAGE. Phase 14 has no production credentials.
