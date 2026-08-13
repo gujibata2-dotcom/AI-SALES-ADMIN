@@ -1,0 +1,3 @@
+# Workforce Security
+
+Tenant identity is carried by workforce, employee, task, message, handoff, capability, and policy records. Cross-tenant access is denied. Tool authorization requires workforce policy, employee tool possession, employee permission, and action policy. External content from employee/customer/product/web/email/document is treated as data, not executable policy. Emergency stops block workforce, employee, task, tool, and workflow scopes.

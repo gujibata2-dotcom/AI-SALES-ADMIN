@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","type":"object","required":["requested","maximum"],"properties":{"requested":{"enum":["L0","L1","L2","L3","L4"]},"maximum":{"enum":["L0","L1","L2","L3","L4"]},"allowed":{"type":"boolean"}}}
