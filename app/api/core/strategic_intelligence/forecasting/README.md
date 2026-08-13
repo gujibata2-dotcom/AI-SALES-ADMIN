@@ -1,0 +1,3 @@
+# Phase 40 module boundary
+
+This subsystem is provider-neutral and standard-library only. Each stage preserves provenance, uncertainty, assumptions and version history. External content is data, never executable instruction. Strategic recommendations are decision support, not autonomous authority. External execution remains behind existing authorization and Action Gateway controls. Historical records are append-only; updates must remain auditable.

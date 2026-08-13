@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","title":"Phase 40 Assumption","type":"object","required":["assumption_id","statement","status","evidence"],"properties":{"assumption_id":{"type":"string"},"statement":{"type":"string"},"status":{"enum":["validated","invalidated","unknown"]},"evidence":{"type":"array"},"changed_at":{"type":"string"}}}
