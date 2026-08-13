@@ -1,0 +1,5 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema","$id":"decision.schema.json","type":"object","additionalProperties":false,
+  "required":["decision_id","title","context","objectives","constraints","evidence","options","assumptions","uncertainty","authorization","version"],
+  "properties":{"decision_id":{"type":"string"},"title":{"type":"string"},"context":{"type":"object"},"objective":{"type":"string"},"objectives":{"type":"array","items":{"type":"string"}},"constraints":{"type":"array","items":{"type":"object"}},"evidence":{"type":"array","items":{"type":"object"}},"options":{"type":"array","items":{"type":"object"}},"selected_option":{"type":["string","null"]},"assumptions":{"type":"array","items":{"type":"string"}},"risks":{"type":"array","items":{"type":"object"}},"uncertainty":{"enum":["KNOWN","ESTIMATED","UNCERTAIN","CONTESTED","UNKNOWN"]},"authorization":{"type":["object","null"]},"expected_outcome":{"type":["object","null"]},"actual_outcome":{"type":["object","null"]},"decision_quality":{"type":["string","null"]},"version":{"type":"integer","minimum":1},"created_at":{"type":"string"},"updated_at":{"type":"string"}}
+}
