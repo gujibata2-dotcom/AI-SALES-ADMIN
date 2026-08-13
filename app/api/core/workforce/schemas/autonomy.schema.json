@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","type":"object","additionalProperties":false,"required":["autonomy","human_approval_for_high_risk"],"properties":{"autonomy":{"enum":["L0_HUMAN_ONLY","L1_AI_ASSIST","L2_AI_EXECUTE_HUMAN_APPROVAL","L3_AI_EXCEPTION_ESCALATION","L4_HIGH_AUTONOMY"]},"human_approval_for_high_risk":{"type":"boolean"}}}
