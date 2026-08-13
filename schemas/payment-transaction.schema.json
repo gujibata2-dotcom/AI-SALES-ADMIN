@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "payment-transaction.schema.json",
+  "type": "object",
+  "required": ["payment_reference", "tenant_id", "plan_id", "amount", "currency", "status", "provider"],
+  "properties": {
+    "payment_reference": {"type": "string", "minLength": 1},
+    "tenant_id": {"type": "string", "minLength": 1},
+    "plan_id": {"const": "199"},
+    "amount": {"const": 19900},
+    "currency": {"const": "thb"},
+    "status": {"enum": ["PAYMENT_INITIATED", "PAYMENT_PENDING", "PAYMENT_SUCCEEDED", "PAYMENT_FAILED", "PAYMENT_CANCELED", "PAYMENT_REFUNDED", "PAYMENT_DISPUTED"]},
+    "provider": {"const": "stripe"},
+    "provider_event_id": {"type": ["string", "null"]}
+  },
+  "additionalProperties": true
+}
