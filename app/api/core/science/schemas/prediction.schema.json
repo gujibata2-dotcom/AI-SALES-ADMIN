@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","title":"Prediction","type":"object","required":["prediction_id","expected_result","confidence","assumptions"],"properties":{"prediction_id":{"type":"string"},"expected_result":{},"range":{},"confidence":{"enum":["HIGH","MEDIUM","LOW","INCONCLUSIVE"]},"assumptions":{"type":"array","items":{"type":"string"}}}}

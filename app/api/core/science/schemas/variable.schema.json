@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","title":"Variable","type":"object","required":["variable_id","name","role"],"properties":{"variable_id":{"type":"string"},"name":{"type":"string"},"role":{"enum":["INDEPENDENT","DEPENDENT","CONTROL","CONFOUNDING","MEDIATING","LATENT","OBSERVED"]},"unit":{"type":"string"},"measurement_method":{"type":"string"}}}

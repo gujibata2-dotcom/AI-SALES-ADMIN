@@ -1,0 +1,2 @@
+# AI Scientific Method
+Use falsifiable hypotheses, explicit controls, baselines where appropriate, predeclared stopping rules, measured outcomes, alternative explanations and replication. Never invent results.

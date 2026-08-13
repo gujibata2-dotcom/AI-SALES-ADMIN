@@ -1,0 +1,2 @@
+# AI Scientific Modeling
+Models declare type, inputs, outputs, assumptions, limitations and validity scope. Prediction error, calibration, robustness and generalization are reported only when supported by data.

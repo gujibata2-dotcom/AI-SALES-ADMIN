@@ -1,0 +1,6 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"Observation",
+  "type":"object","required":["observation_id","description","source","timestamp","status"],
+  "properties":{"observation_id":{"type":"string"},"description":{"type":"string"},"source":{"type":"string"},"timestamp":{"type":"string"},"context":{"type":"object"},"measurement":{},"uncertainty":{},"status":{"enum":["RAW","VALIDATED","QUESTIONABLE","CONFLICTED","REJECTED","UNKNOWN"]}}
+}

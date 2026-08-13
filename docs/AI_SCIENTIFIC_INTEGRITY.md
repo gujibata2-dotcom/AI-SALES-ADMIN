@@ -1,0 +1,2 @@
+# AI Scientific Integrity
+No fabrication, falsification, selective deletion of contradictory results, fake replication, fake significance or fake citations. Missing evidence is UNKNOWN; untestable claims are INCONCLUSIVE/NOT_TESTABLE.

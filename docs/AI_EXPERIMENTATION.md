@@ -1,2 +1,2 @@
 # AI Experimentation
-Every BETTER claim requires a baseline. Experiments record hypothesis, variables, baseline, method, expected and actual results, metrics, limitations, and conclusion. Multi-metric evaluation prevents optimizing one metric while harming real outcomes.
+Experiments track hypothesis, variables, controls, sample, method, prediction, result, limitations, baseline and stopping rules. Production experimentation requires risk assessment, rollback, monitoring and approval.

@@ -1,0 +1,2 @@
+# AI Scientific Reasoning
+Phase 38 establishes an evidence-first scientific lifecycle: observe, measure, question, model, hypothesize, predict, experiment, compare, falsify/support, replicate, review, conclude. Hypotheses never become facts without sufficient evidence.

@@ -1,0 +1,2 @@
+# AI Hypothesis Testing
+Every scientific hypothesis should expose a testable prediction. The engine asks what evidence would falsify it, searches for counterexamples, and records supporting and contradicting evidence separately.

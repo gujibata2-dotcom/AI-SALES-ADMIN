@@ -1,0 +1,2 @@
+# AI Causal Reasoning
+Correlation is not causation. Causal models record relationships, confounders, mediation/moderation, assumptions, evidence and uncertainty. Unsupported causal claims remain UNKNOWN or UNSUPPORTED.

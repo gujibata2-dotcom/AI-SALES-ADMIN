@@ -1,0 +1,2 @@
+# AI Falsification
+Scientific claims are strengthened by surviving attempts to disconfirm them. The system records falsification tests, failure conditions, contradictory evidence and alternative explanations.
