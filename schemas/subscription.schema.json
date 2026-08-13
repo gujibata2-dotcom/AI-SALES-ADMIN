@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","title":"Subscription","type":"object","required":["subscription_id","tenant_id","plan_id","status"],"properties":{"subscription_id":{"type":"string"},"tenant_id":{"type":"string"},"plan_id":{"type":"string"},"status":{"enum":["TRIAL","ACTIVE","PAST_DUE","CANCELED","EXPIRED","PAYMENT_NOT_CONNECTED"]}}}

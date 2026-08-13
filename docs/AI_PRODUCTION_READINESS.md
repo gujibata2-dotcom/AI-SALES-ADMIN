@@ -1,5 +1,5 @@
-# Free package
+# AI Production Readiness
 
-The runtime primitives required for a basic single-employee flow are implemented and tested. However `FREE_READY` is an evidence gate, not a marketing flag. It must remain false until all required production evidence is present in the repository/runtime environment.
+Readiness levels are 0–5: NOT_IMPLEMENTED, INTERNAL_ONLY, TESTABLE, BETA, PRODUCTION_CANDIDATE, PRODUCTION_READY.
 
-The gate must not be manually overridden.
+Phase 49 requires evidence for every gate. The reference implementation intentionally reports paid-plan readiness below production-ready while payment, monitoring, recovery and E2E evidence are absent. No status is upgraded by assertion.

@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","title":"UsageEvent","type":"object","required":["usage_id","tenant_id","resource","quantity","timestamp"],"properties":{"usage_id":{"type":"string"},"tenant_id":{"type":"string"},"resource":{"type":"string"},"quantity":{"type":"integer","minimum":0},"timestamp":{"type":"number"}}}

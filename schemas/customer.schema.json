@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","title":"Customer","type":"object","required":["customer_id","email","status"],"properties":{"customer_id":{"type":"string"},"email":{"type":"string"},"status":{"enum":["PENDING","ACTIVE","SUSPENDED","DELETED"]}}}

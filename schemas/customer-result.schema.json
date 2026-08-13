@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","title":"CustomerResult","type":"object","required":["status","employee","result","timestamp","source"],"properties":{"status":{"type":"string"},"employee":{"type":"string"},"result":{},"timestamp":{"type":"number"},"source":{"type":"string"},"warning":{"type":"string"},"next_action":{"type":"string"}}}

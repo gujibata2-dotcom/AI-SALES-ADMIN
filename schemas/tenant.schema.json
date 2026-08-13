@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","title":"Tenant","type":"object","required":["tenant_id","owner_id","business_id","plan_id","status"],"properties":{"tenant_id":{"type":"string"},"owner_id":{"type":"string"},"business_id":{"type":"string"},"plan_id":{"type":"string"},"status":{"type":"string"}}}
