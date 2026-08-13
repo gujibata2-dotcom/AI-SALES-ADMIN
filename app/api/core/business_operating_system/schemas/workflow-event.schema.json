@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","title":"WorkflowEvent","type":"object","required":["event_id","event_type","timestamp"],"properties":{"event_id":{"type":"string"},"event_type":{"type":"string"},"condition":{"type":"boolean"},"workflow_id":{"type":"string"},"timestamp":{"type":"number"},"payload":{"type":"object"}}}

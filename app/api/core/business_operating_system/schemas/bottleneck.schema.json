@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","title":"Bottleneck","type":"object","required":["type","kind","reference","observed","timestamp"],"properties":{"type":{"const":"BOTTLENECK"},"kind":{"type":"string"},"reference":{"type":"string"},"observed":{},"timestamp":{"type":"number"}}}

@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","title":"BusinessHealth","type":"object","required":["status","signals"],"properties":{"status":{"enum":["MEASURED","NO_DATA","UNKNOWN"]},"signals":{"type":"array"},"warning":{"type":"array","items":{"type":"string"}},"predictions":{"type":"array","items":{"type":"object"}}}}

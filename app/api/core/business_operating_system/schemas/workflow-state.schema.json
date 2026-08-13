@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","title":"WorkflowState","type":"object","required":["workflow_id","state"],"properties":{"workflow_id":{"type":"string"},"state":{"enum":["CREATED","QUEUED","RUNNING","WAITING","BLOCKED","REVIEW_REQUIRED","PAUSED","FAILED","RECOVERING","COMPLETED","CANCELED"]}}}

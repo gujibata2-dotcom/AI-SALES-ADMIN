@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","title":"SLA","type":"object","required":["sla_id","deadline","status"],"properties":{"sla_id":{"type":"string"},"deadline":{"type":"number"},"priority":{"type":"string"},"status":{"enum":["ON_TRACK","AT_RISK","BREACHED"]},"source":{"type":"string"}}}
