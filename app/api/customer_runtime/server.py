@@ -1,7 +1,7 @@
 from __future__ import annotations
 import json, os
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
-from .runtime import Auth, CustomerRuntime, StripeAdapter, AuthorizationError, PaymentNotConfigured, ModelNotConfigured
+from .runtime import Auth, CustomerRuntime, StripeAdapter, AuthorizationError, PaymentNotConfigured, ModelNotConfigured, PaymentVerificationError
 
 store = CustomerRuntime().store
 runtime = CustomerRuntime(store)
@@ -21,8 +21,21 @@ class Handler(BaseHTTPRequestHandler):
         try:
             if self.path=='/v1/billing/webhook':
                 n=int(self.headers.get('Content-Length','0')); raw=self.rfile.read(n); stripe.verify_signature(raw,self.headers.get('Stripe-Signature','')); data=json.loads(raw or b'{}')
-                event_type=data.get('type',''); obj=data.get('data',{}).get('object',{}); tenant_id=obj.get('client_reference_id') or obj.get('metadata',{}).get('tenant_id')
-                if event_type in ('checkout.session.completed','customer.subscription.created','customer.subscription.updated') and tenant_id: runtime.activate_199(tenant_id,obj.get('id','unknown'))
+                event_id=data.get('id')
+                if not event_id: raise PaymentVerificationError('EVENT_ID_MISSING')
+                event_type=data.get('type',''); obj=data.get('data',{}).get('object',{})
+                if event_type=='checkout.session.completed':
+                    tenant_id=obj.get('client_reference_id') or obj.get('metadata',{}).get('tenant_id')
+                    if not tenant_id: raise PaymentVerificationError('TENANT_REFERENCE_MISSING')
+                    session=stripe.retrieve_session(obj.get('id',''))
+                    runtime.activate_199(tenant_id,obj.get('id',''),event_id,session)
+                elif event_type in ('charge.refunded','charge.dispute.created'):
+                    payment_ref=obj.get('payment_intent') or obj.get('id')
+                    row=store.db.execute('SELECT tenant_id FROM billing_transactions WHERE payment_reference=?',(payment_ref,)).fetchone()
+                    if row:
+                        status='PAYMENT_REFUNDED' if event_type=='charge.refunded' else 'PAYMENT_DISPUTED'
+                        store.db.execute('UPDATE billing_transactions SET status=?,updated_at=? WHERE payment_reference=?',(status,__import__('time').time(),payment_ref))
+                        store.db.execute("UPDATE subscriptions SET status='CANCELED' WHERE tenant_id=? AND plan_id='199' AND status='ACTIVE'",(row['tenant_id'],)); store.db.commit(); store.audit(row['tenant_id'],'stripe',status,{'payment_reference':payment_ref,'event_id':event_id})
                 return self.send_json(200,{'received':True})
             data=json_body(self)
             if self.path=='/v1/auth/register':
@@ -36,7 +49,7 @@ class Handler(BaseHTTPRequestHandler):
             if self.path=='/v1/tasks':
                 result=runtime.execute_task(ctx,data['employee_id'],data['prompt'],data['idempotency_key']); return self.send_json(200,result)
             self.send_json(404,{'error':'NOT_FOUND'})
-        except (AuthorizationError,PaymentNotConfigured,ModelNotConfigured,ValueError) as exc:
+        except (AuthorizationError,PaymentNotConfigured,ModelNotConfigured,PaymentVerificationError,ValueError) as exc:
             self.send_json(403 if isinstance(exc,AuthorizationError) else 400,{'error':str(exc)})
         except Exception as exc:
             self.send_json(500,{'error':'INTERNAL_ERROR','type':type(exc).__name__})
