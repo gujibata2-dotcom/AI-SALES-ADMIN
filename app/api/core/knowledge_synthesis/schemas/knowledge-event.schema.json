@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","title":"Phase 39 Contract","type":"object","additionalProperties":true,"description":"Versioned Phase 39 contract. Concrete domain fields are defined by the owning module; provenance and uncertainty must be preserved."}
