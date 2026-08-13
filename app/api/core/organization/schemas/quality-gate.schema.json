@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","type":"object","additionalProperties":false,"required":["quality_gate","independently_reviewed"],"properties":{"quality_gate":{"enum":["PASS","FAIL","REVIEW_REQUIRED","UNKNOWN"]},"independently_reviewed":{"type":"boolean"},"evidence":{"type":"array","items":{"type":"string"}},"reason":{"type":"string"}}}
