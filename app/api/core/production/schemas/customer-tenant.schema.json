@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Customer Tenant",
+  "type": "object",
+  "required": ["customer_id", "organization_id"],
+  "properties": {
+    "customer_id": {"type": "string"},
+    "organization_id": {"type": "string"},
+    "status": {"enum": ["ACTIVE", "PAUSED", "SUSPENDED", "RETIRED"]},
+    "employee_ids": {"type": "array", "items": {"type": "string"}},
+    "knowledge_ids": {"type": "array", "items": {"type": "string"}}
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Employee Permission",
+  "type": "object",
+  "required": ["employee_id", "organization_id", "permissions"],
+  "properties": {
+    "employee_id": {"type": "string"},
+    "organization_id": {"type": "string"},
+    "permissions": {"type": "array", "items": {"type": "string"}, "uniqueItems": true}
+  },
+  "additionalProperties": false
+}

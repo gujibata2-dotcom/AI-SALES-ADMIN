@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Employee Performance",
+  "type": "object",
+  "required": ["employee_id", "organization_id", "tasks_completed", "success_rate", "failure_rate", "human_escalation_rate"],
+  "properties": {
+    "employee_id": {"type": "string"},
+    "organization_id": {"type": "string"},
+    "tasks_completed": {"type": "integer", "minimum": 0},
+    "success_rate": {"type": "number", "minimum": 0, "maximum": 1},
+    "failure_rate": {"type": "number", "minimum": 0, "maximum": 1},
+    "human_escalation_rate": {"type": "number", "minimum": 0, "maximum": 1},
+    "average_execution_time": {"type": "number", "minimum": 0},
+    "learning_events": {"type": "integer", "minimum": 0}
+  },
+  "additionalProperties": false
+}

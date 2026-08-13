@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Audit Event",
+  "type": "object",
+  "required": ["event_id", "organization_id", "action", "timestamp", "result", "verification"],
+  "properties": {
+    "event_id": {"type": "string"},
+    "customer_id": {"type": "string"},
+    "organization_id": {"type": "string"},
+    "employee_id": {"type": ["string", "null"]},
+    "task_id": {"type": ["string", "null"]},
+    "action": {"type": "string"},
+    "tool": {"type": ["string", "null"]},
+    "model": {"type": ["string", "null"]},
+    "timestamp": {"type": "number"},
+    "result": {"type": "string"},
+    "verification": {"type": "string"}
+  },
+  "additionalProperties": false
+}

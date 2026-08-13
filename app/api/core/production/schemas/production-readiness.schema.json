@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Production Readiness",
+  "type": "object",
+  "required": ["gate", "ready", "missing"],
+  "properties": {
+    "gate": {"enum": ["FREE_READY", "STARTER_199_READY", "PRODUCTION_READY"]},
+    "ready": {"type": "boolean"},
+    "missing": {"type": "array", "items": {"type": "string"}},
+    "evidence": {"type": "object", "additionalProperties": {"type": "boolean"}}
+  },
+  "additionalProperties": false
+}

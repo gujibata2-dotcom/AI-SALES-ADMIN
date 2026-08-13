@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Execution Event",
+  "type": "object",
+  "required": ["event_id", "task_id", "phase", "status", "timestamp"],
+  "properties": {
+    "event_id": {"type": "string"},
+    "task_id": {"type": "string"},
+    "phase": {"enum": ["PLAN", "AUTHORIZE", "EXECUTE", "VERIFY", "REPORT", "LEARN"]},
+    "status": {"type": "string"},
+    "timestamp": {"type": "number"},
+    "reason": {"type": ["string", "null"]}
+  },
+  "additionalProperties": false
+}

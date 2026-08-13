@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Usage Quota",
+  "type": "object",
+  "required": ["organization_id", "limits", "used"],
+  "properties": {
+    "organization_id": {"type": "string"},
+    "limits": {"type": "object", "additionalProperties": {"type": "integer", "minimum": 0}},
+    "used": {"type": "object", "additionalProperties": {"type": "integer", "minimum": 0}}
+  },
+  "additionalProperties": false
+}

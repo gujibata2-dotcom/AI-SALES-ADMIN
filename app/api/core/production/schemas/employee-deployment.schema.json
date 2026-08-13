@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Employee Deployment",
+  "type": "object",
+  "required": ["employee_id", "organization_id", "status", "version", "updated_at"],
+  "properties": {
+    "employee_id": {"type": "string", "minLength": 1},
+    "organization_id": {"type": "string", "minLength": 1},
+    "status": {"enum": ["DRAFT", "CONFIGURED", "ACTIVE", "PAUSED", "SUSPENDED", "RETIRED"]},
+    "permissions": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "version": {"type": "integer", "minimum": 1},
+    "updated_at": {"type": "string", "format": "date-time"}
+  },
+  "additionalProperties": false
+}

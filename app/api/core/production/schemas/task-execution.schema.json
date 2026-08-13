@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Task Execution",
+  "type": "object",
+  "required": ["task_id", "organization_id", "employee_id", "status"],
+  "properties": {
+    "task_id": {"type": "string"},
+    "organization_id": {"type": "string"},
+    "employee_id": {"type": "string"},
+    "status": {"enum": ["RECEIVED", "UNDERSTOOD", "PLANNED", "AUTHORIZED", "RUNNING", "VERIFYING", "COMPLETED", "FAILED", "BLOCKED", "UNKNOWN", "REQUIRES_HUMAN"]},
+    "verified": {"type": "boolean"},
+    "idempotency_key": {"type": "string"}
+  },
+  "additionalProperties": false
+}
