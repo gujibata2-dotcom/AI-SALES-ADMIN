@@ -1,3 +1,3 @@
-# AI Opportunity Engine
+# Phase 48 Opportunity Engine
 
-Opportunities are evidence-backed candidates with expected value, cost, risk and confidence. Opportunity/risk pairs should be reviewed together for trade-offs.
+Opportunities cover market, customer, process, automation, cost reduction, product, knowledge and innovation. Expected value is only recorded when evidence supports it; opportunity risk and trade-off are retained alongside benefit.

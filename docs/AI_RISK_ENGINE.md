@@ -1,5 +1,3 @@
-# AI Risk Engine
+# Phase 48 Risk Engine
 
-Risks contain probability, impact, severity, evidence, mitigation, owner and status. Unknown evidence is not converted into a numeric probability.
-
-Early-warning and executive-alert consumers should attach source/time evidence and avoid duplicate alert spam at the integration layer.
+Risks retain probability, impact, severity, evidence, mitigation, owner and status. Early warnings use evidence-backed signals such as deteriorating trends, SLA proximity, budget limits, stale knowledge and increasing failures. Unknown evidence stays unknown.

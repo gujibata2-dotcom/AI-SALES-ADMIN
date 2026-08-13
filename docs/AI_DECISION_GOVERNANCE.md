@@ -1,5 +1,5 @@
-# AI Decision Governance
+# Phase 48 Decision Governance
 
-Risk-based decision governance: LOW can remain recommendation; MEDIUM follows configurable policy; HIGH requires human approval; CRITICAL requires human decision.
+Risk boundary: LOW → AI recommendation; MEDIUM → policy-controlled path; HIGH → human approval; CRITICAL → human decision. Exact thresholds are configurable by policy.
 
-No decision execution occurs without authorization. Human override is auditable. Decision effectiveness compares expected versus actual and feeds learning only when evidence exists.
+Irreversible decisions require increased review. Execution must satisfy authorization, policy, risk and tenant/package permission checks and must use the Phase 47 workflow gate.

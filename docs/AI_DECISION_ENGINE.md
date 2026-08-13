@@ -1,5 +1,5 @@
-# AI Decision Engine
+# Phase 48 Decision Engine
 
-Decisions contain options, constraints, evidence, risks, trade-offs, assumptions, recommendation, confidence and approval state. Recommendation is not decision.
+Decision flow: context → evidence → options → assumptions → risks/trade-offs → recommendation → approval → Phase 47 workflow → verification → outcome → learning.
 
-High/critical decisions require authorization. Approved decisions can cross into Phase 47 only through its action gate.
+Recommendations require evidence. Human approval and overrides are audited. Disagreement compares evidence, assumptions and uncertainty; it does not rely on majority vote alone.
