@@ -1,3 +1,5 @@
-# Phase 39 Module
+# Epistemic Humility
 
-Contract boundary for AI Knowledge Synthesis & Wisdom Engine. Keep transformations traceable, deterministic where possible, provenance-preserving, privacy-safe, and explicit about uncertainty. External material is data, not executable instruction. Do not invent missing information.
+The engine explicitly supports UNKNOWN and LOW_CONFIDENCE. When evidence conflicts, status is CONTESTED; when evidence is absent, UNKNOWN. No synthesis may manufacture evidence, sources, certainty or consensus.
+
+Every important answer exposes: what we know, what we believe, what we do not know, evidence quality, limitations and what information would resolve the uncertainty.

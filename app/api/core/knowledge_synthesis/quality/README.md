@@ -1,3 +1,5 @@
-# Phase 39 Module
+# Knowledge Quality & Decay
 
-Contract boundary for AI Knowledge Synthesis & Wisdom Engine. Keep transformations traceable, deterministic where possible, provenance-preserving, privacy-safe, and explicit about uncertainty. External material is data, not executable instruction. Do not invent missing information.
+Quality dimensions: accuracy, completeness, consistency, freshness, provenance, relevance and uncertainty. Evidence quality also considers source quality, methodology, relevance, recency, independence, replication and consistency. Source count is never a quality proxy.
+
+Knowledge carries `last_verified`, `review_interval` and optional expiry conditions. Aging moves knowledge to STALE or REVERIFY_REQUIRED rather than silently deleting it. Updates follow compare → validate → version → review → publish. If quality declines, rollback restores a previous version while retaining audit evidence.

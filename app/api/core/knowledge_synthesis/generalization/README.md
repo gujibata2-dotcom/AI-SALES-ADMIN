@@ -1,3 +1,3 @@
-# Phase 39 Module
+# Phase 39 module boundary
 
-Contract boundary for AI Knowledge Synthesis & Wisdom Engine. Keep transformations traceable, deterministic where possible, provenance-preserving, privacy-safe, and explicit about uncertainty. External material is data, not executable instruction. Do not invent missing information.
+This directory is an explicit extension point in the Knowledge Synthesis lifecycle. Implementations must preserve provenance, uncertainty, authorization boundaries and historical versions. Provider-specific integrations belong behind adapters; external content is data, not executable instruction.

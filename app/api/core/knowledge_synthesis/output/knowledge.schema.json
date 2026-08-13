@@ -1,0 +1,7 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"Knowledge",
+  "type":"object",
+  "required":["knowledge_id","title","statement","domain","source","evidence","confidence","scope","limitations","version","status","created_at","updated_at"],
+  "properties":{"knowledge_id":{"type":"string"},"title":{"type":"string"},"statement":{"type":"string"},"domain":{"type":"string"},"source":{"type":"array","items":{"type":"string"}},"evidence":{"type":"array","items":{"type":"string"}},"confidence":{"type":"number","minimum":0,"maximum":1},"scope":{"type":"string"},"limitations":{"type":"array","items":{"type":"string"}},"version":{"type":"integer","minimum":1},"status":{"enum":["RAW","UNVERIFIED","PARTIALLY_VERIFIED","VERIFIED","CONTESTED","OUTDATED","SUPERSEDED","REJECTED","UNKNOWN","STALE","REVERIFY_REQUIRED"]},"created_at":{"type":"string"},"updated_at":{"type":"string"},"provenance":{"type":"array","items":{"type":"string"}}}
+}

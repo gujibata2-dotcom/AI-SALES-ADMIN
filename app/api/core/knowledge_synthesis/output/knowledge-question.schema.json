@@ -1,0 +1,1 @@
+{"title":"Knowledge Question","type":"object","required":["question_id","gap_id","question","status"],"properties":{"question_id":{"type":"string"},"gap_id":{"type":"string"},"question":{"type":"string"},"status":{"enum":["GENERATED","RESEARCHED","ANSWERED","REJECTED"]},"research_reference":{"type":"string"}}}

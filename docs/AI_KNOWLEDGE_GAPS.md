@@ -1,16 +1,5 @@
-# Phase 39 Architecture
+# Knowledge Gaps & Research Loop
 
-## Pipeline
-Collect → Normalize → Verify → Compare → Connect → Synthesize → Abstract → Generalize → Principles → Contradictions → Uncertainty → Insights → Knowledge Graph → Gaps → Questions → Update → Distribute → Monitor.
+Gaps cover missing information, weak evidence, contradictions, unknown relationships, unanswered questions and outdated knowledge. Prioritize by importance, uncertainty, impact, risk, cost to resolve and information gain.
 
-## Provenance
-Every claim links to evidence. Every synthesis preserves input lineage. Graph changes are versioned and historical state is retained. Inferred relationships are explicitly marked INFERRED.
-
-## Epistemic states
-UNKNOWN means there is insufficient evidence. CONTESTED means material evidence conflicts. LOW confidence must not be silently upgraded. No hallucinated sources, facts, consensus, or validation.
-
-## Memory
-Episodic → Experience → Pattern → Semantic Knowledge → Principle. Memory is filtered by relevance before retrieval.
-
-## Integration boundaries
-Phase 12 supplies outcomes, failures, corrections and learning events. Phase 36 supplies research findings/questions. Phase 37 supplies innovation experiments. Phase 38 supplies scientific findings. Other phases consume validated knowledge through contracts rather than hidden coupling.
+Gap → research question → Phase 36 → finding → validation → Phase 39 knowledge update. A gap remains open when evidence is insufficient. The system must be able to answer `I DON'T KNOW` with what is known, what is unknown, why it is unknown and what would resolve it.

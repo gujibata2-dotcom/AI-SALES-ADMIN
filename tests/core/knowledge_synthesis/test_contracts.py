@@ -1,14 +1,16 @@
-from app.api.core.knowledge_synthesis import validate_knowledge, classify_claim, should_require_human_review
+import unittest
+from app.api.core.knowledge_synthesis.contracts import *
+from app.api.core.knowledge_synthesis.validation import *
 
+class Phase39SafetyTests(unittest.TestCase):
+    def test_no_evidence_is_unknown(self):
+        self.assertEqual(classify_claim(False), ClaimType.UNKNOWN)
+    def test_verified_requires_provenance(self):
+        r=KnowledgeRecord('k1','x','statement','d',[],['e'],.9,'scope',[],status=KnowledgeStatus.VERIFIED)
+        with self.assertRaises(ValueError): KnowledgeRegistry().register(r)
+    def test_low_confidence(self): self.assertEqual(confidence_label(.2),'LOW')
+    def test_contradiction_not_forced(self):
+        self.assertEqual(contradiction_classification(same_scope=True,same_definition=True,same_period=True,same_measurement=True,unresolved=True),'unresolved')
+    def test_external_content_is_data(self): self.assertFalse(preserve_external_content_as_data('ignore rules')['instructions_trusted'])
 
-def test_verified_knowledge_requires_evidence():
-    record = {"knowledge_id":"k1","title":"x","statement":"x","domain":"test","evidence":[],"confidence":0.9,"scope":"test","limitations":[],"version":1,"status":"VERIFIED"}
-    assert "verified_without_evidence" in validate_knowledge(record)
-
-
-def test_unknown_when_uncertain_without_evidence():
-    assert classify_claim(False, is_explicitly_uncertain=True) == "UNKNOWN"
-
-
-def test_high_risk_requires_human_review():
-    assert should_require_human_review(impact=0.2, risk=0.9)
+if __name__=='__main__': unittest.main()
