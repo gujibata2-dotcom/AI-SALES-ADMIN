@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","title":"Entitlement","type":"object","required":["package_id","employees","features"],"properties":{"package_id":{"type":"string"},"employees":{"type":["integer","string"]},"features":{"type":"array","items":{"type":"string"}}}}

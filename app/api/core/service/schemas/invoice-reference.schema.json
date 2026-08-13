@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","title":"InvoiceReference","type":"object","required":["invoice_reference","provider"],"properties":{"invoice_reference":{"type":"string"},"provider":{"type":"string"},"status":{"type":"string"}}}
