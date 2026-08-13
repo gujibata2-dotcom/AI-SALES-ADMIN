@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","title":"DecisionOutcome","type":"object","required":["decision_id","expected","actual","status"],"properties":{"decision_id":{"type":"string"},"expected":{},"actual":{},"status":{"enum":["MEASURED","NO_DATA","UNKNOWN"]},"error":{},"absolute_error":{}}}

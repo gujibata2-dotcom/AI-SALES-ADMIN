@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","title":"BusinessState","type":"object","required":["business_state_id","organization_id","timestamp","status"],"properties":{"business_state_id":{"type":"string"},"organization_id":{"type":"string"},"timestamp":{"type":"number"},"status":{"enum":["HEALTHY","STABLE","AT_RISK","CRITICAL","UNKNOWN"]}}}

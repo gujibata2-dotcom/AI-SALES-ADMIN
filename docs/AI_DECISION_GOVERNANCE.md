@@ -1,11 +1,5 @@
-# Decision Governance
+# AI Decision Governance
 
-1. Recommendation is advisory.
-2. Policy and authorization are separate checks.
-3. Hard constraints block selection.
-4. High/critical impact and irreversible decisions require review/approval according to policy.
-5. Phase 41 never executes tools or external actions.
-6. Every authorization and override uses a reference-only actor identifier.
-7. Policy conflict is a BLOCK until resolved by the existing governance authority.
+Risk-based decision governance: LOW can remain recommendation; MEDIUM follows configurable policy; HIGH requires human approval; CRITICAL requires human decision.
 
-Audit records retain provenance, options, assumptions, authorization, handoff reference, outcome, review, and version.
+No decision execution occurs without authorization. Human override is auditable. Decision effectiveness compares expected versus actual and feeds learning only when evidence exists.
