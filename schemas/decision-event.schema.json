@@ -1,0 +1,3 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema","$id":"phase41/decision-event.schema.json","type":"object","required":["event_id","decision_id","event_type","timestamp"],"properties":{"event_id":{"type":"string"},"decision_id":{"type":"string"},"event_type":{"enum":["CREATED","EVIDENCE_ADDED","OPTION_GENERATED","EVALUATED","RECOMMENDED","AUTHORIZED","REJECTED","HANDOFF","OUTCOME_RECORDED","REVIEWED","OVERRIDDEN","ADAPTED"]},"actor_reference":{"type":["string","null"]},"reason":{"type":["string","null"]},"evidence_references":{"type":"array","items":{"type":"string"}},"timestamp":{"type":"string"}},"additionalProperties":false
+}

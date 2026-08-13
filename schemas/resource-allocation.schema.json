@@ -1,0 +1,3 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema","$id":"phase41/resource-allocation.schema.json","type":"object","required":["allocation_id","decision_id","resources","authorization_status"],"properties":{"allocation_id":{"type":"string"},"decision_id":{"type":"string"},"resources":{"type":"array","items":{"type":"object","required":["resource_reference","quantity","basis"]}},"authorization_status":{"enum":["PENDING","AUTHORIZED","REJECTED","UNKNOWN"]},"tradeoffs":{"type":"array","items":{"type":"object"}}},"additionalProperties":false
+}

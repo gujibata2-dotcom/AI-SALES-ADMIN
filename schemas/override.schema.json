@@ -1,0 +1,3 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema","$id":"phase41/override.schema.json","type":"object","required":["override_id","decision_id","action","reason","actor_reference","timestamp"],"properties":{"override_id":{"type":"string"},"decision_id":{"type":"string"},"action":{"enum":["APPROVE","REJECT","MODIFY","PAUSE","OVERRIDE"]},"reason":{"type":"string","minLength":1},"actor_reference":{"type":"string","minLength":1},"timestamp":{"type":"string"},"scope":{"type":["string","null"]}},"additionalProperties":false
+}

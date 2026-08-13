@@ -1,0 +1,3 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema","$id":"phase41/authorization.schema.json","type":"object","required":["authorization_id","level","status","policy_reference"],"properties":{"authorization_id":{"type":"string"},"level":{"enum":["AUTO_ALLOWED","POLICY_ALLOWED","HUMAN_APPROVAL_REQUIRED","EXECUTIVE_APPROVAL_REQUIRED","PROHIBITED"]},"status":{"enum":["PENDING","AUTHORIZED","REJECTED","EXPIRED"]},"policy_reference":{"type":"string"},"authority_reference":{"type":["string","null"]},"reason":{"type":"string"},"timestamp":{"type":"string"}},"additionalProperties":false
+}

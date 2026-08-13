@@ -1,0 +1,6 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"phase41/objective.schema.json",
+  "type":"object","required":["objective_id","primary_objective","success_criteria","failure_criteria","priority","time_horizon"],
+  "properties":{"objective_id":{"type":"string"},"primary_objective":{"type":"string"},"secondary_objectives":{"type":"array","items":{"type":"string"}},"success_criteria":{"type":"array","items":{"type":"object"}},"failure_criteria":{"type":"array","items":{"type":"object"}},"priority":{"type":"string"},"time_horizon":{"type":"string"},"stakeholder_impacts":{"type":"array","items":{"type":"object"}}},"additionalProperties":false
+}

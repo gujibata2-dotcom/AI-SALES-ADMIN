@@ -1,0 +1,3 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema","$id":"phase41/decision-version.schema.json","type":"object","required":["decision_id","version","change","reason","author_reference","timestamp"],"properties":{"decision_id":{"type":"string"},"version":{"type":"integer","minimum":1},"change":{"type":"string"},"reason":{"type":"string"},"author_reference":{"type":"string"},"review_reference":{"type":["string","null"]},"timestamp":{"type":"string"}},"additionalProperties":false
+}

@@ -1,0 +1,3 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema","$id":"phase41/decision-review.schema.json","type":"object","required":["review_id","decision_id","checks","evidence_state"],"properties":{"review_id":{"type":"string"},"decision_id":{"type":"string"},"checks":{"type":"object","properties":{"evidence_sufficient":{"type":"boolean"},"assumptions_reasonable":{"type":"boolean"},"risks_identified":{"type":"boolean"},"alternatives_considered":{"type":"boolean"},"authorization_correct":{"type":"boolean"},"execution_correct":{"type":["boolean","null"]}}},"evidence_state":{"enum":["KNOWN","ESTIMATED","UNCERTAIN","CONTESTED","UNKNOWN"]},"reviewer_reference":{"type":["string","null"]}},"additionalProperties":false
+}

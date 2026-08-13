@@ -1,0 +1,9 @@
+{
+  "decision_id":"fixture-decision-001",
+  "title":"Synthetic recommendation only",
+  "context":{"source":"synthetic"},
+  "objective":{"objective_id":"obj-001","primary_objective":"test authorization boundary","success_criteria":[],"failure_criteria":[],"priority":"HIGH","time_horizon":"synthetic"},
+  "constraints":[],"evidence":[{"evidence_id":"e-001","state":"KNOWN"}],
+  "options":[{"option_id":"OPTION_A","label":"Synthetic option A"},{"option_id":"DO_NOTHING","label":"Do nothing"}],
+  "selected_option":null,"assumptions":[],"risks":[],"uncertainty":"UNKNOWN","authorization":null,"expected_outcome":null,"actual_outcome":null,"decision_quality":null,"version":1,"created_at":"synthetic","updated_at":"synthetic"
+}

@@ -1,0 +1,4 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema","$id":"phase41/constraint.schema.json","type":"object","required":["constraint_id","type","mode","rule"],
+  "properties":{"constraint_id":{"type":"string"},"type":{"enum":["financial","technical","legal","policy","security","privacy","time","resource","organizational","human_approval"]},"mode":{"enum":["HARD_CONSTRAINT","SOFT_CONSTRAINT"]},"rule":{"type":"string"},"authority_reference":{"type":["string","null"]}},"additionalProperties":false
+}

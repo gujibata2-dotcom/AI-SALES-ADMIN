@@ -1,0 +1,4 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema","$id":"phase41/option.schema.json","type":"object","required":["option_id","label","rationale"],
+  "properties":{"option_id":{"type":"string"},"label":{"type":"string"},"rationale":{"type":"string"},"benefit":{"type":["number","null"]},"cost":{"type":["number","null"]},"risk":{"type":["number","null"]},"uncertainty":{"enum":["KNOWN","ESTIMATED","UNCERTAIN","CONTESTED","UNKNOWN"]},"time":{"type":["number","null"]},"feasibility":{"type":["number","null"]},"reversibility":{"enum":["REVERSIBLE","PARTIALLY_REVERSIBLE","IRREVERSIBLE"]},"dependencies":{"type":"array","items":{"type":"string"}},"opportunity_cost":{"type":["number","null"]},"second_order_effects":{"type":"array","items":{"type":"object"}}},"additionalProperties":false
+}

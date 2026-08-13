@@ -1,0 +1,4 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema","$id":"phase41/evaluation.schema.json","type":"object","required":["evaluation_id","option_id","criteria","evidence_state"],
+  "properties":{"evaluation_id":{"type":"string"},"option_id":{"type":"string"},"criteria":{"type":"array","items":{"type":"object","required":["criterion_id","name","weight","rationale"],"properties":{"criterion_id":{"type":"string"},"name":{"type":"string"},"weight":{"type":["number","null"]},"rationale":{"type":"string"}}}},"expected_value":{"type":["number","null"]},"utility":{"type":["number","null"]},"downside":{"type":["number","null"]},"upside":{"type":["number","null"]},"evidence_state":{"enum":["KNOWN","ESTIMATED","UNCERTAIN","CONTESTED","UNKNOWN"]}},"additionalProperties":false
+}

@@ -1,0 +1,3 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema","$id":"phase41/outcome.schema.json","type":"object","required":["outcome_id","decision_id","expected","actual","timestamp","evidence"],"properties":{"outcome_id":{"type":"string"},"decision_id":{"type":"string"},"expected":{"type":"object"},"actual":{"type":"object"},"timestamp":{"type":"string"},"deviation":{"type":["object","null"]},"evidence":{"type":"array","items":{"type":"object"}},"impact":{"type":["object","null"]}},"additionalProperties":false
+}

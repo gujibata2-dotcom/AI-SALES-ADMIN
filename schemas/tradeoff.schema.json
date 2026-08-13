@@ -1,0 +1,3 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema","$id":"phase41/tradeoff.schema.json","type":"object","required":["tradeoff_id","decision_id","dimensions"],"properties":{"tradeoff_id":{"type":"string"},"decision_id":{"type":"string"},"dimensions":{"type":"array","items":{"type":"object","required":["dimension","option_comparison","evidence_state"]}},"stakeholder_impact":{"type":"array","items":{"type":"object"}}},"additionalProperties":false
+}

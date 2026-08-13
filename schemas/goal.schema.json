@@ -1,0 +1,3 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema","$id":"phase41/goal.schema.json","type":"object","required":["goal_id","name","level","status"],"properties":{"goal_id":{"type":"string"},"parent_goal_id":{"type":["string","null"]},"name":{"type":"string"},"level":{"enum":["mission","strategic_goals","operational_goals","quarterly_goals","project_goals","employee_goals","task"]},"status":{"enum":["ON_TRACK","AT_RISK","OFF_TRACK","FAILED","UNKNOWN"]},"priority":{"type":"string"},"dependencies":{"type":"array","items":{"type":"string"}}},"additionalProperties":false
+}
