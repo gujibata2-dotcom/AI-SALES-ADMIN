@@ -1,0 +1,16 @@
+"""Phase 49 machine-readable readiness contract for the 199 path."""
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ProductReadiness",
+  "type": "object",
+  "required": ["plan_id", "status", "evidence"],
+  "properties": {
+    "plan_id": {"const": "STARTER_199"},
+    "status": {"enum": ["NOT_IMPLEMENTED", "INTERNAL_ONLY", "TESTABLE", "BETA", "PRODUCTION_CANDIDATE", "PRODUCTION_READY"]},
+    "evidence": {
+      "type": "object",
+      "additionalProperties": {"type": "boolean"}
+    }
+  },
+  "additionalProperties": false
+}
